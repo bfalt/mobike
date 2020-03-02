@@ -1,0 +1,19 @@
+.home-banner {
+  // background-image: url('TODO: A picture URL from unsplash.com!');
+  height: 100vh;
+  color: #eee;
+  text-align: center;
+  padding-top: 40vh;
+  background-size: cover;
+  background-position: center;
+
+  h1{
+    margin-bottom: 25px;
+    font-family: 'Raleway', ;
+    font-weight: lighter;
+  }
+
+  p {
+    margin: 30px;
+  }
+}

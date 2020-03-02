@@ -1,0 +1,84 @@
+body {
+  width: 100%;
+  height: 100%;
+/*  overflow: hidden;
+*/margin: 0px;
+  font-weight: lighter;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+
+div[class*=box] {
+  height: 60px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.box-2 {
+  background-color: transparent;
+  margin: auto;
+}
+
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+
+.btn-two {
+  color: #69385C;
+  transition: all 0.5s;
+  position: relative;
+}
+.btn-two span {
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.btn-two span a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn-two::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(169,169,196,0.2);
+  background-color: rgba(169,169,196,0.1);
+}
+.btn-two::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(169,169,196,0.2);
+  background-color: rgba(169,169,196,0.1);
+}
+.btn-two:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(169,169,196,0);
+}
+.btn-two:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(169,169,196,0);
+}
+
