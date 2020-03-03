@@ -1,5 +1,5 @@
 class Review < ApplicationRecord
-  belongs_to :motorbike
+  belongs_to :booking
   belongs_to :user
 
   validates :description, length: { minimum: 10 }

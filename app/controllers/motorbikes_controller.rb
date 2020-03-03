@@ -6,6 +6,7 @@ class MotorbikesController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
     authorize @motorbike
   end
 
