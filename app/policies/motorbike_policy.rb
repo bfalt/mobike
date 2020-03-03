@@ -15,8 +15,6 @@ class MotorbikePolicy < ApplicationPolicy
 
   def update?
     belongs_to_user
-    # - record: the restaurant passed to the `authorize` method in controller
-    # - user:   the `current_user` signed in with Devise.
   end
 
   def destroy?
