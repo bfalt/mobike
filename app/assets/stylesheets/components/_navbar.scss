@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: transparent;
+  background-color: #10100F;
   transition: 0.5s background-color ease;
 }
 .navbar-lewagon-white {
@@ -17,14 +17,10 @@
 
 .dropdown-menu {
   background-color: #4c4c4c !important;
-  box-shadow: 3px 3px 7 grey;
+  border-radius: 5px;
+  box-shadow: 3px 3px 7px grey;
 }
 
 .nav-item a {
   color: grey !important;
-}
-
-.nav-link a {
-  padding-right: 10px;
-
 }

@@ -1,28 +1,32 @@
-<h1>Motorbikes#show</h1>
-<p>Find me in app/views/motorbikes/show.html.erb</p>
-
-<div>
-  <% @motorbike.photos.each do |photo| %>
-    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-  <% end %>
-</div>
-
-<div>
-  <%= @motorbike.name %>
-  <%= @motorbike.make %>
-  <%= @motorbike.model %>
-  <%= @motorbike.year %>
-  <%= @motorbike.address %>
-  <%= @motorbike.description %>
-  <%= @motorbike.price %>
-</div>
-
-<div id='motorbike-booking-dates' data-unavailable="<%= @motorbike.unavailable_dates.to_json %>">
-    <% if current_user.id != @motorbike.user_id  %>
-       <%= simple_form_for([@motorbike, @booking]) do |f| %>
-           <%= f.input :start_date, as: :string, type: :text %>
-           <%= f.input :end_date, as: :string, type: :text %>
-           <%= f.submit "Book", class: "btn btn-primary" %>
-        <% end %>
+<div class="container">
+  <div class="bike-photo">
+    <% @motorbike.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
     <% end %>
+  </div>
+
+  <div>
+    <h2> <%= @motorbike.name %> </h2>
+    <h2><%= @motorbike.make %>, <%= @motorbike.model %></h2>
+    <p><%= @motorbike.year %></p>
+    <p><%= @motorbike.address %></p>
+    <p><%= @motorbike.description %></p>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+        <div id='motorbike-booking-dates' data-unavailable="<%= @motorbike.unavailable_dates.to_json %>">
+    <% if current_user.id != @motorbike.user_id  %>
+          <%= simple_form_for([@motorbike, @booking]) do |f| %>
+            <%= f.input :start_date, as: :string, type: :text %>
+            <%= f.input :end_date, as: :string, type: :text %>
+            <%= f.submit "Book", class: "btn btn-primary" %>
+          <% end %>
+    <% end %>
+        </div>
+    </div>
+  </div>
 </div>
