@@ -8,6 +8,7 @@ class CreateMotorbikes < ActiveRecord::Migration[5.2]
       t.text :description
       t.string :address
       t.integer :price
+      t.string :photo
       t.references :user, foreign_key: true
 
       t.timestamps
