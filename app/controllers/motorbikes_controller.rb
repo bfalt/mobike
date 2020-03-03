@@ -13,8 +13,9 @@ class MotorbikesController < ApplicationController
 
   def create
     @motorbike = Motorbike.new(motorbike_params)
+    @motorbike.user = current_user
     if @motorbike.save
-      redirect_to motorbike_path(@motorbike)
+      redirect_to motorbike_path(@motorbike), notice: 'Your bike was successfully created.'
     else
       render 'new'
     end
@@ -26,13 +27,17 @@ class MotorbikesController < ApplicationController
 
   def update
     @motorbike = Motorbike.find(params[:id])
-    @motorbike.update(motorbike_params)
-    redirect_to @motorbike
+    if @motorbike.update(motorbike_params)
+      redirect_to @motorbike, notice: 'Your bike was successfully updated.'
+    else
+      render :edit
+    end
   end
 
   def destroy
     @motorbike = Motorbike.find(params[:id])
     @motorbike.destroy
+    redirect_to motorbikes_url, notice: 'Your bike was successfully deleted.'
   end
 
   private
