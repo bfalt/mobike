@@ -10,7 +10,6 @@ class BookingsController < ApplicationController
 
   def show
     authorize @booking
-    rails
   end
 
   # New booking form on show page of motorbike
