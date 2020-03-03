@@ -3,9 +3,28 @@
 @import "motorbike_show";
 
 
+
+
 .motorbikes {
   margin: 100px 0;
 }
+
+.Cards {
+   display: flex;
+   flex-wrap: wrap;
+
+  &__grid {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+
+    > .grid-item {
+      padding: 0 8px;
+    }
+  }
+}
+
 
 
 
