@@ -2,6 +2,7 @@ class Motorbike < ApplicationRecord
   has_many :reviews
   has_many :bookings
   belongs_to :user
+  has_many_attached :photos
 
   validates :name, presence: true
   validates :make, presence: true

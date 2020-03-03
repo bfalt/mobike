@@ -1,2 +1,14 @@
-<h1>Motorbikes#index</h1>
-<p>Find me in app/views/motorbikes/index.html.erb</p>
+<section class="motorbikes">
+  <div class="container-fluid">
+    <h3><%= @motorbikes.count %> Motorbikes</h3>
+    <div class="Cards">
+      <div class="Cards__grid">
+        <% @motorbikes.each do |motorbike|  %>
+          <div class="grid-item">
+            <%= render 'shared/card', motorbike: motorbike %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
