@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(version: 2020_03_03_064558) do
     t.integer "year"
     t.text "description"
     t.string "address"
+    t.integer "price"
+    t.string "photo"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
