@@ -8,7 +8,12 @@ gem 'puma'
 gem 'rails', '5.2.4.1'
 gem 'redis'
 gem 'devise'
+<<<<<<< HEAD
 gem 'pundit'
+=======
+gem 'cloudinary', '~> 1.12.0'
+
+>>>>>>> master
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
