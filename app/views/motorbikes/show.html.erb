@@ -16,9 +16,6 @@
   <%= @motorbike.description %>
 </div>
 
-
-<h1>book it</h1>
-
 <div id='motorbike-booking-dates' data-unavailable="<%= @motorbike.unavailable_dates.to_json %>">
     <% if current_user.id != @motorbike.user_id  %>
        <%= simple_form_for([@motorbike, @booking]) do |f| %>
@@ -27,4 +24,4 @@
            <%= f.submit "Book", class: "btn btn-primary" %>
         <% end %>
     <% end %>
- </div>
+</div>

@@ -12,14 +12,19 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 60px;
+  width: 70px;
 }
 
 .dropdown-menu {
   background-color: #4c4c4c !important;
+  box-shadow: 3px 3px 7 grey;
 }
 
 .nav-item a {
-  color:  white !important;
+  color: grey !important;
 }
 
+.nav-link a {
+  padding-right: 10px;
+
+}
