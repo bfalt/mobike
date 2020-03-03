@@ -1,32 +1,46 @@
-<div class="container">
-  <div class="bike-photo">
-    <% @motorbike.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
-  </div>
-
-  <div>
-    <h2> <%= @motorbike.name %> </h2>
-    <h2><%= @motorbike.make %>, <%= @motorbike.model %></h2>
-    <p><%= @motorbike.year %></p>
-    <p><%= @motorbike.address %></p>
-    <p><%= @motorbike.description %></p>
-  </div>
-</div>
-
-
-<div class="container">
+<div class="container show-container">
   <div class="row">
-    <div class="col-md-4 mx-auto">
-        <div id='motorbike-booking-dates' data-unavailable="<%= @motorbike.unavailable_dates.to_json %>">
-    <% if current_user.id != @motorbike.user_id  %>
-          <%= simple_form_for([@motorbike, @booking]) do |f| %>
-            <%= f.input :start_date, as: :string, type: :text %>
-            <%= f.input :end_date, as: :string, type: :text %>
-            <%= f.submit "Book", class: "btn btn-primary" %>
+    <div class="col-md-4">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <%= cl_image_tag @motorbike.photos[0].key, height: 300, width: 400, crop: :fill, class: "d-block w-100"  %>
+          </div>
+          <% @motorbike.photos[1..-1].each do |photo| %>
+          <div class="carousel-item">
+          <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, class: "d-block w-100" %>
+          </div>
           <% end %>
-    <% end %>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div>
+        <h2> <%= @motorbike.name %> </h2>
+        <h2><%= @motorbike.make %>, <%= @motorbike.model %></h2>
+        <p><%= @motorbike.year %></p>
+        <p><%= @motorbike.address %></p>
+        <p><%= @motorbike.description %></p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div id='motorbike-booking-dates' data-unavailable="<%= @motorbike.unavailable_dates.to_json %>">
+        <% if current_user.id != @motorbike.user_id  %>
+            <%= simple_form_for([@motorbike, @booking]) do |f| %>
+              <%= f.input :start_date, as: :string, type: :text %>
+              <%= f.input :end_date, as: :string, type: :text %>
+              <%= f.submit "Book", class: "btn btn-primary" %>
+            <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
