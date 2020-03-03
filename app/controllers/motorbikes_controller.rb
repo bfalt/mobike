@@ -51,6 +51,6 @@ class MotorbikesController < ApplicationController
   end
 
   def motorbike_params
-    params.require(:motorbike).permit(:name, :make, :model, :year, :description, :address, photos: [])
+    params.require(:motorbike).permit(:name, :make, :model, :year, :description, :address)
   end
 end
