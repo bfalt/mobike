@@ -16,7 +16,7 @@ User.create(email: "dev@email.com", password: "password")
 end
 
 10.times do
-  motorbike = Motorbike.new(name: Faker::Company.name, make: Faker::Vehicle.make, model: Faker::Vehicle.model, year: Faker::Vehicle.year, description: Faker::Vehicle.standard_specs, address: Faker::Address.full_address, price: Faker::Number.within(range: 2500..10000))
+  motorbike = Motorbike.new(name: Faker::Ancient.titan, make: Faker::Vehicle.make, model: Faker::Vehicle.model, year: Faker::Vehicle.year, description: Faker::Vehicle.standard_specs, address: Faker::Address.full_address, price: Faker::Number.within(range: 2500..10000))
   motorbike.user = User.all.sample
   motorbike.save!
 end
