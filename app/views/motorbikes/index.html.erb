@@ -5,7 +5,8 @@
       <div class="Cards__grid">
         <% @motorbikes.each do |motorbike|  %>
           <div class="grid-item">
-            <%= render 'shared/card', motorbike: motorbike %>
+            <h2><%= motorbike.name %></h2>
+            <%#= render 'shared/card', motorbike: motorbike %>
           </div>
         <% end %>
       </div>

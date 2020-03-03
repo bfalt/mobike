@@ -12,16 +12,17 @@ class BookingsController < ApplicationController
     authorize @booking
   end
 
-  def new
-    @booking = Booking.new
-    authorize @booking
-  end
+  # New booking form on show page of motorbike
+  # def new
+  #   @booking = Booking.new
+  #   authorize @booking
+  # end
 
   def create
     @booking = Booking.new(booking_params)
-    authorize @booking
     @booking.user = current_user
     @booking.motorbike = Motorbike.find(params[:motorbike_id])
+    authorize @booking
     if @booking.save
       redirect_to booking_path(@booking), notice: 'Your booking was successfull!'
     else
