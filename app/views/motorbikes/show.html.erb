@@ -1,2 +1,21 @@
 <h1>Motorbikes#show</h1>
 <p>Find me in app/views/motorbikes/show.html.erb</p>
+
+
+<div>
+  <% @motorbike.photos.each do |photo| %>
+    <%= cl_image_tag @motorbike.photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+</div>
+
+
+<div>
+  <%= @motorbike.name %>
+  <%= @motorbike.make %>
+  <%= @motorbike.model %>
+  <%= @motorbike.year %>
+  <%= @motorbike.address %>
+  <%= @motorbike.description %>
+</div>
+
+
