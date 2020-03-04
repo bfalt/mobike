@@ -3,6 +3,15 @@ class MotorbikesController < ApplicationController
 
   def index
     @motorbikes = policy_scope(Motorbike)
+    @motorbikes = Motorbike.geocoded
+    @markers = @motorbikes.map do |motorbike|
+      {
+        lat: motorbike.latitude,
+        lng: motorbike.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { motorbike: motorbike }),
+        # image_url: helpers.asset_url('surflogo.png')
+      }
+    end
   end
 
   def show
