@@ -4,6 +4,9 @@ class Motorbike < ApplicationRecord
   belongs_to :user
   has_many_attached :photos
 
+  geocoded_by :address, if: :will_save_change_to_address?
+  after_validation :geocode
+
   validates :name, presence: true
   validates :make, presence: true
   validates :model, presence: true
