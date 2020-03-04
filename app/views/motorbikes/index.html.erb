@@ -1,7 +1,6 @@
 <h4 style="padding: 40px; text-align: justify;"><%= @motorbikes.count %> Motorbikes</h4>
 <section class="motorbikes">
   <div class="container-fluid">
-
     <div class="Cards">
       <div class="Cards__grid">
 
@@ -12,6 +11,8 @@
                  <%= render 'shared/card', motorbike: motorbike %>
                 <%#= render 'shared/card', motorbike: motorbike %>
              </div>
+            <% end %>
+          </div>
            <% end %>
 
           </div>
@@ -25,12 +26,13 @@
             <#% end %>
           </div> -->
         </div>
-
-
-
+        <div class="col-4">
+          <%= link_to "/", class: "map" do %>
+          <%= image_tag "map.png" %>
+          <% end %>
+        </div>
       </div>
     </div>
-
   </div>
 </section>
 
