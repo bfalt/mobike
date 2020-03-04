@@ -1,7 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: transparent;
-  transition: 0.5s background-color ease;
+  background-color: white;
+  a:hover{
+    color: #737373 !important;
+  }
 }
 .navbar-lewagon-white {
   background-color: white;
@@ -13,55 +15,44 @@
   width: 70px;
 }
 .dropdown-menu {
-  background-color: #4C4C4C !important;
+  background-color: white !important;
   border-radius: 5px;
-  box-shadow: 3px 3px 7px grey;
+  box-shadow: 0px 2px 20px -8px rgba(0,0,0,0.75);
+  a{
+    color: black !important;
+  }
+  a:hover{
+    background-color: #eee;
+    color: black !important;
+  }
 }
 .nav-item a {
-  color: grey !important;
+  color: black !important;
+  font-weight: 400;
 }
 
-// .navbar-lewagon {
-//   justify-content: space-between;
-//   background-color: #10100F;
-//   transition: 0.5s background-color ease;
-//   background-color: transparent;
-// }
-// .navbar-lewagon-white {
-//   background-color: white;
-// }
 
-// .navbar-lewagon .navbar-collapse {
-//   flex-grow: 0;
-// }
+.navbar-homepage{
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  a{
+    color: white !important;
+  }
+  a:hover{
+    color: #cbcbcb !important;
+  }
+}
 
-// .navbar-lewagon .navbar-brand img {
-//   width: 70px;
-// }
-
-// .dropdown-menu {
-//   background-color: white !important;
-//   border-radius: 5px;
-//   box-shadow: 3px 3px 7px black;
-//   color: white;
-// }
-
-// .nav-item a {
-//   color: white !important;
-// }
-
-// .nav-item a:hover {
-//   color: #b5b5b5 !important;
-// }
-
-// .dropdown-menu a {
-//   color: black !important;
-// }
-
-// .dropdown-menu a:hover {
-//   color: black !important;
-// }
-
-// .dropdown-item:hover {
-//   background-color: #eee;
-// }
+.dropdown-menu-home {
+  background-color: white !important;
+  border-radius: 5px;
+  box-shadow: 3px 3px 7px black;
+  color: white;
+  a{
+    color: black !important;
+  }
+  a:hover{
+    color: #4a4a4a !important;
+  }
+}
