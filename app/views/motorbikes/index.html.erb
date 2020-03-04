@@ -3,8 +3,7 @@
   <div class="container-fluid">
 
     <div class="Cards">
-      <div class="Cards__grid">
-
+      <div class="Cards__grid d-flex">
         <div class="col-8">
           <div class="cards">
             <% @motorbikes.each do |motorbike|  %>
@@ -13,23 +12,13 @@
                 <%#= render 'shared/card', motorbike: motorbike %>
              </div>
            <% end %>
-
           </div>
         </div>
-        <div id="map" style="width: 100%; height: 600px " data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        <div class="col-4" id="map" style="width: 100%; height: 100vh; position: sticky; top: 0 " data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
-
-          <!-- <div class="col-4">
-            <#%= link_to "/", class: "map" do %>
-            <#%= image_tag "map.png" %>
-            <#% end %>
-          </div> -->
-        </div>
-
-
-
       </div>
     </div>
+  </div>
 
   </div>
 </section>
