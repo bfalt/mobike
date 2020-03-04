@@ -1,7 +1,6 @@
 <h4 style="padding: 40px; text-align: justify;"><%= @motorbikes.count %> Motorbikes</h4>
 <section class="motorbikes">
   <div class="container-fluid">
-
     <div class="Cards">
       <div class="Cards__grid d-flex">
         <div class="col-8">
@@ -11,15 +10,13 @@
                  <%= render 'shared/card', motorbike: motorbike %>
                 <%#= render 'shared/card', motorbike: motorbike %>
              </div>
-           <% end %>
+            <% end %>
           </div>
-        </div>
+          </div>
         <div class="col-4" id="map" style="width: 100%; height: 100vh; position: sticky; top: 0 " data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
       </div>
     </div>
-  </div>
-
   </div>
 </section>
 
