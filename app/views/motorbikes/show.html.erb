@@ -1,14 +1,14 @@
 <div class="container show-container">
-  <div class="row">
+  <div class="row justify-content-center align-items-center">
     <div class="col-md-4">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <%= cl_image_tag @motorbike.photos[0].key, height: 300, width: 400, crop: :fill, class: "d-block w-100"  %>
+            <%= cl_image_tag @motorbike.photos[0].key, height: 300, width: 420, crop: :fill, class: "d-block w-100"  %>
           </div>
           <% @motorbike.photos[1..-1].each do |photo| %>
           <div class="carousel-item">
-          <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, class: "d-block w-100" %>
+          <%= cl_image_tag photo.key, height: 300, width: 420, crop: :fill, class: "d-block w-100" %>
           </div>
           <% end %>
         </div>
@@ -22,21 +22,19 @@
         </a>
       </div>
     </div>
-    <div class="col-md-4">
-      <div>
+    <div class="col-md-5 align-items-center">
         <h2> <%= @motorbike.name %> </h2>
         <h2><%= @motorbike.make %>, <%= @motorbike.model %></h2>
         <p><%= @motorbike.year %></p>
         <p><%= @motorbike.address %></p>
-        <p><%= @motorbike.description %></p>
-      </div>
+        <div style="overflow: auto; width:100%; height:150px;"><p><%= @motorbike.description %></p>/</div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div id='motorbike-booking-dates' data-unavailable="<%= @motorbike.unavailable_dates.to_json %>">
         <% if current_user.id != @motorbike.user_id  %>
             <%= simple_form_for([@motorbike, @booking]) do |f| %>
-              <%= f.input :start_date, as: :string, type: :text %>
-              <%= f.input :end_date, as: :string, type: :text %>
+              <%= f.input :start_date,label: 'Booking Start Date', as: :string, type: :text %>
+              <%= f.input :end_date, label: 'Booking End Date', as: :string, type: :text %>
               <%= f.submit "Book", class: "btn btn-primary" %>
             <% end %>
         <% end %>
@@ -44,6 +42,11 @@
     </div>
   </div>
 </div>
+
+<div class="col-md-12">
+  <img src="./map.png" alt="">
+</div>
+
 
 <% if policy(@motorbike).edit? %>
     <%= link_to "Edit", edit_motorbike_path(@motorbike) %>
