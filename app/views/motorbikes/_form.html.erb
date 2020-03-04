@@ -1,31 +1,45 @@
-<%= simple_form_for(motorbike) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-  </div>
-  <div class="form-inputs">
-    <%= f.input :make %>
-  </div>
-  <div class="form-inputs">
-    <%= f.input :model %>
-  </div>
-  <div class="form-inputs">
-    <%= f.input :year %>
-  </div>
-  <div class="form-inputs">
-    <%= f.input :description %>
-  </div>
-  <div class="form-inputs">
-    <%= f.input :address %>
-  </div>
-  <div class="form-inputs">
-    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-    <%= link_to "Go back", motorbikes_path %>
+      <%= simple_form_for(motorbike) do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+        <div class="form-inputs">
+          <%= f.input :name %>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :make %>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :model %>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :year %>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :description %>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :address %>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        </div>
+          <div class="form-action d-lg-flex d-block">
+            <div class="form-actions w-100">
+              <%= f.button :submit, class: 'btn-mobike'%>
+                <div>
+                  <%= link_to "Go back", motorbikes_path, class: 'btn btn-mobike'%>
+                </div>
+              <div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <div style="height: 80px;"></div>
+    </div>
   </div>
-<% end %>
+</div>

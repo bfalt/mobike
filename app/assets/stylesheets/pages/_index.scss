@@ -6,15 +6,16 @@
 
 
 .motorbikes {
-  margin: 100px 0;
+justify-content: start;
 }
 
 .Cards {
    display: flex;
    flex-wrap: wrap;
 
+
   &__grid {
-    flex: 1;
+    flex: 3;
     display: flex;
     flex-wrap: wrap;
     margin: 0 -8px;
@@ -26,9 +27,10 @@
 }
 
 
-
-
-
-
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 8px
+}
 
 

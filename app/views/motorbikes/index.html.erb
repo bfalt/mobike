@@ -1,15 +1,44 @@
+<h4 style="padding: 40px; text-align: justify;"><%= @motorbikes.count %> Motorbikes</h4>
 <section class="motorbikes">
   <div class="container-fluid">
-    <h3><%= @motorbikes.count %> Motorbikes</h3>
+
     <div class="Cards">
       <div class="Cards__grid">
-        <% @motorbikes.each do |motorbike|  %>
-          <div class="grid-item">
-             <%= render 'shared/card', motorbike: motorbike %>
-            <%#= render 'shared/card', motorbike: motorbike %>
+
+        <div class="col-8">
+          <div class="cards">
+            <% @motorbikes.each do |motorbike|  %>
+             <div class="grid-item">
+                 <%= render 'shared/card', motorbike: motorbike %>
+                <%#= render 'shared/card', motorbike: motorbike %>
+             </div>
+           <% end %>
+
           </div>
-        <% end %>
+        </div>
+
+
+          <div class="col-4">
+            <%= link_to "/", class: "map" do %>
+            <%= image_tag "map.png" %>
+            <% end %>
+          </div>
+        </div>
+
+
+
       </div>
     </div>
+
   </div>
 </section>
+
+
+<div class="col-12">
+  <%= link_to "/", class: "endSearch" do %>
+  <%= image_tag "mcglass.png" %>
+  <% end %>
+</div>
+
+<h2>No more bike!</h2>
+<h3>Try changing your filters, adjusting your dates, or exploring the map</h3>
