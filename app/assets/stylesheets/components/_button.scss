@@ -44,3 +44,18 @@
   background: #ED6663;
   color: white;
 }
+
+.btn-mobike {
+  display: block;
+  width: 100%;
+  color: white;
+  border-radius: 3px;
+  background-color: black;
+  margin: 5px;
+  padding: 8px;
+}
+
+.btn-mobike:hover{
+    color: white;
+    background-color: #383838;
+  }
