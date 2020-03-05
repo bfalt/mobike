@@ -24,6 +24,6 @@ class MotorbikePolicy < ApplicationPolicy
   private
 
   def belongs_to_user
-    record.user == user
+    record.user == user || user.admin
   end
 end

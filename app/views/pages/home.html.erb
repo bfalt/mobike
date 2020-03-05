@@ -2,6 +2,11 @@
   <div class="container">
     <h1>MoBike brings the<strong> open road</strong> to <strong>you</strong>!</h1>
         <%= link_to "View all bikes", motorbikes_path, class: "btn btn-ghost"%>
+        <%= form_tag motorbikes_path, method: :get do %>
+        <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a bike" %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+        <ul id="dropdown"></ul>
+    <% end %>
   </div>
 </div>
 

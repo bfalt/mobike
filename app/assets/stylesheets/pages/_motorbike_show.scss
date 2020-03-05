@@ -1,24 +1,26 @@
 .container {
+  display: table;
   margin-top: 20px;
 }
+
+.show_map {
+  text-align: center;
+  margin: 10px 10px;
+}
+
 
 .carousel-inner {
   border-radius: 8px;
   box-shadow: 4px 4px 10px grey;
 }
 
+.mapboxgl-canvas {
+  border-radius: 7px;
+  box-shadow: 4px 4px 10px grey;
 
-.map-photo img {
-  width: 81%;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border-radius: 12px;
-  box-shadow: 4px 4px 15px grey;
-  background-image: cover;
 }
 
 #list {
-
   font-size: 20px;
   color: black;
   border: 1px solid grey;

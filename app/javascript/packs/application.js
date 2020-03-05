@@ -8,8 +8,12 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 
-initUpdateNavbarOnScroll();
-initFlatpickr()
+import { initAlgoliaSearch } from "../plugins/init_algolia_search.js";
 
-initMapbox()
-initAutocomplete()
+initUpdateNavbarOnScroll();
+initFlatpickr();
+
+initMapbox();
+initAutocomplete();
+
+initAlgoliaSearch();
