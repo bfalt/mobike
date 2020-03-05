@@ -28,10 +28,8 @@
         </ul>
     </div>
     <div class="col-md-6">
-      <ol>
-
-
-          <div class="bookingcards">
+        <div class="bookingcards">
+          <div>
             <% @bookings.each do |booking|  %>
              <div class="card-product">
               <%= cl_image_tag booking.motorbike.photos[0].key%>
@@ -39,17 +37,16 @@
                 <h2><%= booking.motorbike.name %></h2>
                 <p><%= booking.motorbike.model %></p>
                 <p>start date: <%= booking.start_date %>   end date:<%= booking.start_date %></p>
+                <%= link_to 'Reviews', pages_dashboard_path  %>
               </div>
             </div>
+            </div class="col-md-3">
 
                 <%#= render 'shared/card', motorbike: motorbike %>
              </div>
             <% end %>
           </div>
-
-
-
-      </ol>
+     </div>
     </div>
   </div>
 </div>
