@@ -1,17 +1,14 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 mx-auto">
-
-
       <%= simple_form_for(motorbike) do |f| %>
         <%= f.error_notification %>
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-        <div class="input-group">
-          <%= f.input :make, placeholder: "Make", label: false  %>
-
-          <%= f.input :year, placeholder: "Year", label: false  %>
-
+      <div class="form-row">
+        <div class="col-md-6">
+            <%= f.input :make, placeholder: "Make", label: false  %>
+                </div>
+              <div class="col-md-6">
+            <%= f.input :year, placeholder: "Year", label: false  %>
+          </div>
         </div>
         <div class="form-inputs">
           <%= f.input :description, placeholder: "Description of your bike", label: false  %>
@@ -22,8 +19,9 @@
         <div class="form-inputs">
           <%= f.input :address, placeholder: "Address", label: false  %>
         </div>
-        <div class="form-inputs">
-          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <div class="form-inputs text-left">
+          <p><strong>Add Photos</strong></p>
+          <%= f.input :photos, as: :file, input_html: { multiple: true }, label: false %>
         </div>
           <div class="form-action d-lg-flex d-block">
             <div class="form-actions w-100">
@@ -37,6 +35,3 @@
         </div>
       <% end %>
       <div style="height: 80px;"></div>
-    </div>
-  </div>
-</div>
