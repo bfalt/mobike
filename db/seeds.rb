@@ -6,7 +6,7 @@ Booking.destroy_all
 Motorbike.destroy_all
 User.destroy_all
 
-User.create(email: "dev@email.com", password: "password")
+User.create(email: "dev@email.com", password: "password", admin: true)
 10.times do
   user = User.create(email: Faker::Internet.email, password: "password")
 end
@@ -15,29 +15,29 @@ end
 
 motorbikes = [
   {
-    image_url: ["https://images.pexels.com/photos/39693/motorcycle-racer-racing-race-speed-39693.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260, https://images-na.ssl-images-amazon.com/images/I/71zf7w0HkdL._AC_SX466_.jpg,"],
+    image_url: ["https://images.pexels.com/photos/39693/motorcycle-racer-racing-race-speed-39693.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", "https://images.unsplash.com/photo-1529946607596-ce8147321723?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"],
     name: 'Superfast R1',
     year: '2020',
     make: 'Yamaha',
     model: 'R1',
-    description: 'Very very nice!',
+    description: 'The engine\'s torque and power delivery are unmistakable, with the four catalysers doing little to mute the MotoGP exhaust note!',
     address: 'London, UK',
     price: 10
   },
 
    {
-    image_url: ["https://images.pexels.com/photos/1309668/pexels-photo-1309668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940, https://i.pinimg.com/originals/cd/a7/88/cda788ea03af41319dd359f5f83359e4.jpg"],
+    image_url: ["https://images.pexels.com/photos/1309668/pexels-photo-1309668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "https://i.pinimg.com/originals/cd/a7/88/cda788ea03af41319dd359f5f83359e4.jpg"],
     name: 'Fun Ducati!',
     year: '2017',
     make: 'Ducati',
     model: 'Streetfighter 1098s',
-    description: 'Very very nice!',
+    description: 'Ducati claim it’s the lightest bike in the class, at 167kg (17kg lighter than the S4Rs it replaces) and it’s also the most powerful Ducati naked bike ever made. It’s a liquid-cooled, 155bhp V-twin bruiser that uses a hybrid 1098/1198 motor, a modified frame for more stability and a slightly longer swingarm. Think of it a cross between a big supermoto and a Monster and you’ll be on the right track!',
     address: 'Amsterdan, Netherlands',
     price: 17
   },
 
   {
-    image_url: ["https://images.pexels.com/photos/595807/pexels-photo-595807.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500, https://psmfirestorm.blob.core.windows.net/crs-images/210557/7987/original.jpg, https://cdn.dealerspike.com/imglib/v1/800x600/imglib/Assets/Inventory/EE/F2/EEF298CC-1375-4E43-A599-C33433D9A896.jpg"],
+    image_url: ["https://psmfirestorm.blob.core.windows.net/crs-images/210557/7987/original.jpg", "https://images.pexels.com/photos/595807/pexels-photo-595807.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", "https://cdn.dealerspike.com/imglib/v1/800x600/imglib/Assets/Inventory/EE/F2/EEF298CC-1375-4E43-A599-C33433D9A896.jpg"],
     name: 'Ninja Power!',
     year: '2018',
     make: 'Kawasaki',
@@ -48,7 +48,7 @@ motorbikes = [
   },
 
   {
-    image_url: ["https://bd.gaadicdn.com/processedimages/triumph/rocket-3/source/v_rocket-3-std1564575462.jpg?tr=h-48, https://img.drivemag.net/media/default/0001/97/Triumph-Rocket-III-2-9011-default-large.jpeg"],
+    image_url: ["https://bd.gaadicdn.com/processedimages/triumph/rocket-3/source/v_rocket-3-std1564575462.jpg?tr=h-48", "https://img.drivemag.net/media/default/0001/97/Triumph-Rocket-III-2-9011-default-large.jpeg"],
     name: 'Englands Finest!',
     year: '2020',
     make: 'Triumph',
@@ -59,7 +59,7 @@ motorbikes = [
   },
 
   {
-    image_url: ["https://stat.overdrive.in/wp-content/odgallery/2017/10/39047_harley-davidson_fat_boy_1.jpg"],
+    image_url: ["https://images.unsplash.com/photo-1558981001-5864b3250a69?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80", "https://images.unsplash.com/photo-1558980394-4c7c9299fe96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80", "https://stat.overdrive.in/wp-content/odgallery/2017/10/39047_harley-davidson_fat_boy_1.jpg"],
     name: 'Murica!!!',
     year: '2020',
     make: 'Harley Davidson',
@@ -81,7 +81,8 @@ motorbikes = [
   },
 
   {
-    image_url: ["https://cdn.dealerspike.com/imglib/v1/800x600/imglib/Assets/Inventory/32/D9/32D9E6C0-93C4-4E7E-BE7A-D95F8E08C285.jpg"],
+
+    image_url: ["https://cdn.dealerspike.com/imglib/v1/800x600/imglib/Assets/Inventory/32/D9/32D9E6C0-93C4-4E7E-BE7A-D95F8E08C285.jpg" , "https://images.unsplash.com/photo-1572506745854-299ae0b55400?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"],
     name: 'Another ok piece of British Engineering.',
     year: '2014',
     make: 'Triumph',
@@ -92,7 +93,9 @@ motorbikes = [
   },
 
   {
-    image_url: ["https://www.totalmotorcycle.com/motorcycles/2016/2016-Kawasaki-Ninja-300a.jpg"],
+
+    image_url: ["https://images.unsplash.com/photo-1580310390364-19360356c52b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80", "https://images.unsplash.com/photo-1580310614729-ccd69652491d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" "https://images.unsplash.com/flagged/photo-1563806164183-25d492848b25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"],
+
     name: 'Little Ninja Power!',
     year: '2017',
     make: 'Kawasaki',
@@ -103,7 +106,7 @@ motorbikes = [
   },
 
   {
-    image_url: ["https://images.pexels.com/photos/2949293/pexels-photo-2949293.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940, https://i.ytimg.com/vi/17SUGNUFB7Y/maxresdefault.jpg, https://images.pexels.com/photos/2611690/pexels-photo-2611690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940, https://images.pexels.com/photos/2611686/pexels-photo-2611686.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"],
+    image_url: ["https://images.pexels.com/photos/2611686/pexels-photo-2611686.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"],
     name: 'A hardtail you want',
     year: '2009',
     make: 'Harley Davidson',
@@ -114,7 +117,7 @@ motorbikes = [
   },
 
   {
-    image_url: ["https://auto.ndtvimg.com/bike-images/large/bmw/s-1000-rr/bmw-s-1000-rr.webp?v=7, https://stat.overdrive.in/wp-content/odgallery/2019/06/52784_BMWS1000RR_014_jk.jpg"],
+    image_url: ["https://stat.overdrive.in/wp-content/odgallery/2019/06/52784_BMWS1000RR_014_jk.jpg", "https://auto.ndtvimg.com/bike-images/large/bmw/s-1000-rr/bmw-s-1000-rr.webp?v=7"],
     name: 'Lets get some speeding tickets!',
     year: '2019',
     make: 'BMW',
@@ -125,7 +128,7 @@ motorbikes = [
   },
 
   {
-    image_url: ["https://images.pexels.com/photos/2549942/pexels-photo-2549942.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940, https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940, https://images.pexels.com/photos/3378437/pexels-photo-3378437.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500, https://images.pexels.com/photos/34006/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"],
+    image_url: ["https://images.pexels.com/photos/2549942/pexels-photo-2549942.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "https://images.pexels.com/photos/3378437/pexels-photo-3378437.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", "https://images.pexels.com/photos/34006/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"],
     name: 'Old School',
     year: '2017',
     make: 'Yamaha',
@@ -137,7 +140,7 @@ motorbikes = [
 
 
   {
-    image_url: ["https://images.pexels.com/photos/163210/motorcycles-race-helmets-pilots-163210.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940, https://www.aprilia.com/assets/aprilia-sites/master/models/moto/road/RSV4-1100-FACTORY/main/2020/RSV4-Factory-1100-My20/original/RSV4-Factory-1100-My20.jpg"],
+    image_url: ["https://images.pexels.com/photos/163210/motorcycles-race-helmets-pilots-163210.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "https://www.aprilia.com/assets/aprilia-sites/master/models/moto/road/RSV4-1100-FACTORY/main/2020/RSV4-Factory-1100-My20/original/RSV4-Factory-1100-My20.jpg"],
     name: 'Old School',
     year: '2020',
     make: 'Aprilla',
@@ -148,12 +151,12 @@ motorbikes = [
 
 
   {
-    image_url: ["https://images.unsplash.com/photo-1574313007729-055d09a7ce85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80, https://images.unsplash.com/photo-1529946607596-ce8147321723?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://i.pinimg.com/originals/cd/a7/88/cda788ea03af41319dd359f5f83359e4.jpg"],
+    image_url: ["https://images.unsplash.com/photo-1574313007729-055d09a7ce85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80", "https://images.unsplash.com/photo-1529946607596-ce8147321723?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://i.pinimg.com/originals/cd/a7/88/cda788ea03af41319dd359f5f83359e4.jpg"],
     name: 'Superfast R1',
     year: '2020',
     make: 'Yamaha',
     model: 'R1',
-    description: 'he Yamaha YZF-R1, or R1, is an open class sport bike, or superbike, motorcycle made by Yamaha from 1998 through the current 2020 model year.',
+    description: 'The Yamaha YZF-R1, or R1, is an open class sport bike, or superbike, motorcycle made by Yamaha from 1998 through the current 2020 model year.',
     address: 'London, UK',
     price: 100
   },
@@ -170,7 +173,7 @@ motorbikes = [
   },
 
   {
-    image_url: ["https://images.pexels.com/photos/595807/pexels-photo-595807.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500, https://psmfirestorm.blob.core.windows.net/crs-images/210557/7987/original.jpg"],
+    image_url: ["https://images.pexels.com/photos/595807/pexels-photo-595807.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", "https://psmfirestorm.blob.core.windows.net/crs-images/210557/7987/original.jpg"],
     name: 'Nimble and Fast!!!!',
     year: '2018',
     make: 'Kawasaki',
