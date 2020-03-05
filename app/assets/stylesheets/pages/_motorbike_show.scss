@@ -1,6 +1,13 @@
 .container {
+  display: table;
   margin-top: 20px;
 }
+
+
+.col {
+  display: table-cell;
+}
+
 
 .carousel-inner {
   border-radius: 8px;

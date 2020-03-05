@@ -1,6 +1,6 @@
 <div class="container show-container">
   <div class="row justify-content-center align-items-center">
-    <div class="col-md-4">
+    <div class="col-md-5">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -22,9 +22,8 @@
         </a>
       </div>
     </div>
-    <div class="col-md-5 align-items-center">
-        <h2> <%= @motorbike.name %> </h2>
-        <h2><%= @motorbike.make %>, <%= @motorbike.model %></h2>
+    <div class="col-md-4">
+        <h2 class="make-model"><%= @motorbike.make %>, <%= @motorbike.model %></h2>
         <p><%= @motorbike.year %></p>
         <p><%= @motorbike.address %></p>
         <p><%= @motorbike.price %></p>
@@ -52,11 +51,11 @@
 
 
 <% if policy(@motorbike).edit? %>
-    <%= link_to "Edit", edit_motorbike_path(@motorbike) %>
+    <%= link_to "Edit", edit_motorbike_path(@motorbike), id: "list", class: "btn btn-ghost"%>
 <% end %>
 
 <% if policy(@motorbike).destroy? %>
-    <%= link_to "Delete", motorbike_path(@motorbike), method: :delete, data: { confirm: "Are you sure?" }%>
+    <%= link_to "Delete", motorbike_path(@motorbike), id: "list", class: "btn btn-ghost", method: :delete, data: { confirm: "Are you sure?" }%>
 <% end %>
 
 
