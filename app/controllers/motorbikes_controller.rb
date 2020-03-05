@@ -2,15 +2,21 @@ class MotorbikesController < ApplicationController
   before_action :set_motorbike, only: [:show, :edit, :update, :destroy]
 
   def index
-    @motorbikes = policy_scope(Motorbike)
-    @motorbikes = Motorbike.geocoded
+    #Get all the bikes geocoded
+    @motorbikes = policy_scope(Motorbike).geocoded
+
+    if params[:query].present?
+        @motorbikes = @motorbikes.search_by_make_and_model_and_address(params[:query])
+    end
+
+
+
     @markers = @motorbikes.map do |motorbike|
       {
         lat: motorbike.latitude,
         lng: motorbike.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { motorbike: motorbike }),
-        # image_url: helpers.asset_url('surflogo.png')
-      }
+       }
     end
   end
 
