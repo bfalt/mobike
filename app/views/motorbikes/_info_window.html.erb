@@ -1,2 +1,5 @@
-<h3><%= motorbike.make %></h3>
-<p><%= motorbike.address %></p>
+<div class="info">
+  <h5><%= motorbike.make %>, <%= motorbike.model %></h5>
+  <p><%= motorbike.address %></p>
+  <div class="info-image" style="background-image: url(<%= cl_image_path motorbike.photos.first.key %>)"></div>
+</div>
