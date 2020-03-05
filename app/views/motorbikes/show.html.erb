@@ -1,6 +1,6 @@
 <div class="container show-container">
   <div class="row justify-content-center align-items-center">
-    <div class="col-md-5">
+    <div class="col-md-5 col-sm-12">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -22,14 +22,14 @@
         </a>
       </div>
     </div>
-    <div class="col-md-4">
-        <h2 class="make-model"><%= @motorbike.make %>, <%= @motorbike.model %></h2>
-        <p><%= @motorbike.year %></p>
+    <div class="col-md-4 col-sm-12">
+        <h3 class="make-model"><%= @motorbike.make %>, <%= @motorbike.model %></h3>
+        <h4><%= @motorbike.year %></h4>
         <p><%= @motorbike.address %></p>
-        <p><%= @motorbike.price %></p>
+        <p>$<%= @motorbike.price %></p>
         <div style="overflow: auto; width:100%; height:150px;"><p><%= @motorbike.description %></p></div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-12">
       <div id='motorbike-booking-dates' data-unavailable="<%= @motorbike.unavailable_dates.to_json %>">
         <% if current_user.id != @motorbike.user_id  %>
             <%= simple_form_for([@motorbike, @booking]) do |f| %>
@@ -43,11 +43,14 @@
   </div>
 </div>
 
-<div class="map-photo">
-  <%= image_tag "map.png" %>
+<div class="show_map">
+  <div class="col-lg-12 mx-auto">
+    <div  id="map" style="width: 85%; height: 80vh; margin-top: 20px; display: inline-block;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  </div>
 </div>
 
-<%=  link_to "View all bikes", motorbikes_path, id: "list", class: "btn btn-ghost"%>
+
+<%= link_to "View all bikes", motorbikes_path, id: "list", class: "btn btn-ghost"%>
 
 
 <% if policy(@motorbike).edit? %>

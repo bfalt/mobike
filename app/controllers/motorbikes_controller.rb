@@ -17,6 +17,12 @@ class MotorbikesController < ApplicationController
   def show
     @booking = Booking.new
     authorize @motorbike
+    @markers =
+      [{
+        lat: @motorbike.latitude,
+        lng: @motorbike.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { motorbike: @motorbike }),
+      }]
   end
 
   def new
