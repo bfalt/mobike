@@ -1,35 +1,27 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 mx-auto">
-
-
       <%= simple_form_for(motorbike) do |f| %>
         <%= f.error_notification %>
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-        <div class="form-inputs">
-          <%= f.input :name %>
+      <div class="form-row">
+        <div class="col-md-6">
+            <%= f.input :make, placeholder: "Make", label: false  %>
+                </div>
+              <div class="col-md-6">
+            <%= f.input :year, placeholder: "Year", label: false  %>
+          </div>
         </div>
         <div class="form-inputs">
-          <%= f.input :make %>
+          <%= f.input :description, placeholder: "Description of your bike", label: false  %>
         </div>
         <div class="form-inputs">
-          <%= f.input :model %>
+          <%= f.input :price, placeholder: "Enter daily rate", label: false  %>
         </div>
         <div class="form-inputs">
-          <%= f.input :year %>
+          <%= f.input :address, placeholder: "Address", label: false  %>
         </div>
-        <div class="form-inputs">
-          <%= f.input :description %>
-        </div>
-        <div class="form-inputs">
-          <%= f.input :price %>
-        </div>
-        <div class="form-inputs">
-          <%= f.input :address %>
-        </div>
-        <div class="form-inputs">
-          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <div class="form-inputs text-left">
+          <p><strong>Add Photos</strong></p>
+          <%= f.input :photos, as: :file, input_html: { multiple: true }, label: false %>
         </div>
           <div class="form-action d-lg-flex d-block">
             <div class="form-actions w-100">
@@ -43,6 +35,3 @@
         </div>
       <% end %>
       <div style="height: 80px;"></div>
-    </div>
-  </div>
-</div>
