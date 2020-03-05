@@ -3,8 +3,6 @@
 @import "motorbike_show";
 
 
-
-
 .motorbikes {
 justify-content: start;
 }
@@ -26,31 +24,6 @@ justify-content: start;
     }
   }
 }
-
-
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 8px
-}
-
-.bookingcards {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 8px;
-  height: 120px;
-
-}
-
-.bookingcard img {
-
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
-}
-
-
-
 
 
 @media(max-width: 992px) {
