@@ -5,14 +5,15 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new
+    @review.booking = @booking
     authorize @review
   end
 
   def create
     @review = Review.new(review_params)
-    authorize @review
     @review.user = current_user
     @review.booking = Booking.find(params[:booking_id])
+    authorize @review
     @review.save
     redirect_to booking_path(@booking)
   end

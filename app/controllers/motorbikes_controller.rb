@@ -23,6 +23,7 @@ class MotorbikesController < ApplicationController
 
   def show
     @booking = Booking.new
+    @reviews = @motorbike.reviews
     authorize @motorbike
     @markers =
       [{
