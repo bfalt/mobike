@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
-
+    <meta name="algolia-app-id" content="<%= ENV["ALGOLIA_APP_ID"] %>">
+    <meta name="algolia-search-only-api-key" content="<%= ENV["ALGOLIA_SEARCH_ONLY_API_KEY"] %>">
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -23,3 +24,4 @@
     <%= javascript_pack_tag 'application' %>
   </body>
 </html>
+

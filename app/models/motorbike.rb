@@ -14,6 +14,19 @@ class Motorbike < ApplicationRecord
   validates :description, presence: true
   validates :address, presence: true
 
+  include PgSearch::Model
+  pg_search_scope :search_by_make_and_model_and_address,
+    against: [ :make, :model, :address ],
+    using: {
+      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+  }
+
+  include AlgoliaSearch
+
+  algoliasearch do
+    attributes :make, :model, :address
+  end
+
   def unavailable_dates
     bookings.pluck(:start_date, :end_date).map do |range|
       { from: range[0], to: range[1] }
