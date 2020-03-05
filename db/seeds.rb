@@ -2,6 +2,7 @@
 require 'faker'
 require "open-uri"
 
+Booking.destroy_all
 Motorbike.destroy_all
 User.destroy_all
 
@@ -21,7 +22,7 @@ motorbikes = [
     model: 'R1',
     description: 'The engine\'s torque and power delivery are unmistakable, with the four catalysers doing little to mute the MotoGP exhaust note!',
     address: 'London, UK',
-    price: 100
+    price: 10
   },
 
    {
@@ -32,7 +33,7 @@ motorbikes = [
     model: 'Streetfighter 1098s',
     description: 'Ducati claim it’s the lightest bike in the class, at 167kg (17kg lighter than the S4Rs it replaces) and it’s also the most powerful Ducati naked bike ever made. It’s a liquid-cooled, 155bhp V-twin bruiser that uses a hybrid 1098/1198 motor, a modified frame for more stability and a slightly longer swingarm. Think of it a cross between a big supermoto and a Monster and you’ll be on the right track!',
     address: 'Amsterdan, Netherlands',
-    price: 170
+    price: 17
   },
 
   {
@@ -43,7 +44,7 @@ motorbikes = [
     model: 'Ninja 650',
     description: 'Reinvigorated to further embody Ninja® sportbike lineage, the new 2020 Ninja® 650 motorcycle comes packed with a sporty 649cc engine, next-level technology advancements and sharp styling updates. Unmistakable sport performance is met with an upright riding position for exciting daily commutes, while a supreme level of attitude reminds you of its legendary heritage.',
     address: 'Delft, Netherlands',
-    price: 125
+    price: 12
   },
 
   {
@@ -54,7 +55,7 @@ motorbikes = [
     model: 'Rocket',
     description: 'A genuine motorcycle legend, the original Triumph Rocket was a pure original equipped with the world’s largest production motorbike engine and more muscle and presence than all others. The next chapter in this incredible story was introduced with an all-new Rocket TFC, which once again tore up the rule book and set a whole new benchmark for torque, performance, capability and style.',
     address: 'Munich, Germany',
-    price: 200
+    price: 20
   },
 
   {
@@ -65,21 +66,22 @@ motorbikes = [
     model: 'Fat Boy',
     description: 'Act like a tough guy, ride this bike.',
     address: 'Berlin, Germany',
-    price: 210
+    price: 21
   },
 
   {
-    image_url: ["https://imgd.aeplcdn.com/1280x720/bw/models/ducati-panigale-v4-r.jpg?20190103151915, https://cdn1-production-images-kly.akamaized.net/wxhV2fOpcwWcZp4ZxsytrD6BzZk=/640x360/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/2762495/original/019051800_1553678447-2019_Ducati_Panigale_V4_R_Motorcycle.jpg, https://cdn-1.motorsport.com/images/mgl/2wBz1pB0/s8/ducati-panigale-v4r-1.jpg, https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"],
+    image_url: ["https://imgd.aeplcdn.com/1280x720/bw/models/ducati-panigale-v4-r.jpg?20190103151915, https://cdn1-production-images-kly.akamaized.net/wxhV2fOpcwWcZp4ZxsytrD6BzZk=/640x360/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/2762495/original/019051800_1553678447-2019_Ducati_Panigale_V4_R_Motorcycle.jpg, https://cdn-1.motorsport.com/images/mgl/2wBz1pB0/s8/ducati-panigale-v4r-1.jpg, https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80, https://imgd.aeplcdn.com/1280x720/bw/models/ducati-panigale-v4-r.jpg?20190103151915"],
     name: 'Italys finest!',
     year: '2020',
     make: 'Ducati',
     model: 'Panigale V4R',
     description: 'Are you single? Wish you had a girlfriend? Trust me. Rent this bike and you wont be single for long! You know you want to ride this bike. Do yourself a favor and rent this beauty!!!',
     address: 'Milan, Italy',
-    price: 250
+    price: 25
   },
 
   {
+
     image_url: ["https://cdn.dealerspike.com/imglib/v1/800x600/imglib/Assets/Inventory/32/D9/32D9E6C0-93C4-4E7E-BE7A-D95F8E08C285.jpg" , "https://images.unsplash.com/photo-1572506745854-299ae0b55400?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"],
     name: 'Another ok piece of British Engineering.',
     year: '2014',
@@ -91,7 +93,9 @@ motorbikes = [
   },
 
   {
+
     image_url: ["https://images.unsplash.com/photo-1580310390364-19360356c52b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80", "https://images.unsplash.com/photo-1580310614729-ccd69652491d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" "https://images.unsplash.com/flagged/photo-1563806164183-25d492848b25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"],
+
     name: 'Little Ninja Power!',
     year: '2017',
     make: 'Kawasaki',
@@ -163,9 +167,9 @@ motorbikes = [
     year: '2017',
     make: 'Ducati',
     model: 'Streetfighter 1098s',
-    description: 'Very very nice!',
+    description: 'This is a mean and nasty Ducati that delivers a wild ride. It’s not practical in any way, shape or form, but it is bloody good fun to ride thanks to a storming engine and thoroughly sorted chassis. If this sounds like your kind of bike, give the Streetfighter a blast. If not, then avoid it and buy something like a Monster that is still naked, but considerably more refined.',
     address: 'Amsterdan, Netherlands',
-    price: 170
+    price: 17
   },
 
   {
@@ -176,7 +180,7 @@ motorbikes = [
     model: 'Ninja 650',
     description: 'Reinvigorated to further embody Ninja® sportbike lineage, the new 2020 Ninja® 650 motorcycle comes packed with a sporty 649cc engine, next-level technology advancements and sharp styling updates. Unmistakable sport performance is met with an upright riding position for exciting daily commutes, while a supreme level of attitude reminds you of its legendary heritage.',
     address: 'Delft, Netherlands',
-    price: 125
+    price: 12
   },
 ]
 
