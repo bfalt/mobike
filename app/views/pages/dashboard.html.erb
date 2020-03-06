@@ -34,7 +34,7 @@
              <div class="card-dashboard">
               <%= cl_image_tag booking.motorbike.photos[0].key%>
               <div class="card-dashboard-infos">
-                <h2><%= booking.motorbike.name %></h2>
+                <h2><%= booking.motorbike.make %></h2>
                 <p><%= booking.motorbike.model %></p>
                 <p>start date: <%= booking.start_date %>   end date:<%= booking.end_date %></p>
                 <% if policy(Review.new(booking: booking)).create? %>
