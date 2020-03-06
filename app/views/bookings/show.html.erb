@@ -1,16 +1,17 @@
 <div class="container-listing">
   <br>
-  <h2><strong>Congratulations, your booking has been confirmed!</strong></h2><br>
-  <h3><strong>Your trip details</strong></h3><br>
-  <strong>Start Date: <%= @booking.start_date %></strong> | <strong>End Date: <%= @booking.end_date %></strong>
+  <h2><strong>We've recieved your booking!</strong></h2><br>
+  <h3><strong>Your rental details</strong></h3><br>
   <h4><strong><%= @booking.motorbike.make %></strong></h4>
+  <strong>Start Date: <%= @booking.start_date %></strong> | <strong>End Date: <%= @booking.end_date %></strong>
   <p>Location: <%= @booking.motorbike.address %></p>
   <p><%= @booking.motorbike.description %></p>
+  <p>Total: $<%= @booking.total_price %></p>
 </div>
 
 <div align="middle">
   <div class="map-photo", style="width:200px;height:200px;">
-  <%= image_tag "QrCode.png" %>
+  <%#= image_tag "QrCode.png" %>
   <p>Scan the QR code on your bill, check the payment information, press pay and you are done!</p>
   </div>
 </div>
