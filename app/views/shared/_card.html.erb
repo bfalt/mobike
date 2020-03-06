@@ -10,6 +10,9 @@
       <div class="Card__price">$ <%= "#{motorbike.price}0" %> / day</div>
       <div class="Card__meta">
         <div class="Card__rating">
+          <% motorbike.average_rating.times do %>
+            <i class="fas fa-star" style="color: #ffb400;"></i>
+          <% end %>
            <!-- <div class="d-flex">
               <% #(1..5).to_a.each do |el| %>
                 <% #if  bookings.reviews.present? %>

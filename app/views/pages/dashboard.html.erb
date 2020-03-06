@@ -38,21 +38,23 @@
                 <h4><%= booking.motorbike.model %></h4>
 
               <div class="card-dashboard-infos">
-                <h2><%= booking.motorbike.name %></h2>
+                <h2><%= booking.motorbike.make %></h2>
                 <p><%= booking.motorbike.model %></p>
+                <p><%= booking.status %></p>
                 <p>start date: <%= booking.start_date %>   end date:<%= booking.end_date %></p>
                 <% if policy(Review.new(booking: booking)).create? %>
                   <%= link_to 'Add a review', new_booking_review_path(booking)  %>
                 <% end %>
               </div>
             </div>
-            </div class="col-md-3">
-
-                <%#= render 'shared/card', motorbike: motorbike %>
-             </div>
             <% end %>
           </div>
      </div>
+    </div>
+    <div class="col-md-3">
+      <% @motorbikes.each do |motorbike| %>
+        <%= render 'motorbike_card', motorbike: motorbike %>
+      <% end %>
     </div>
   </div>
 </div>

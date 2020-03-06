@@ -3,8 +3,8 @@ class PagesController < ApplicationController
   def home
   end
   def dashboard
-    @motorbikes = Motorbike.all
-    @bookings = Booking.all
+    @motorbikes = current_user.motorbikes
+    @bookings = current_user.bookings
 
   end
 end
