@@ -18,10 +18,8 @@ end
 
 motorbikes = [
 
-
   {
     image_url: ["https://kickstart.bikeexif.com/wp-content/uploads/2020/02/deus-guzzi-850-t3.jpg", "https://kickstart.bikeexif.com/wp-content/uploads/2020/02/deus-guzzi-850-t3-1.jpg", "https://kickstart.bikeexif.com/wp-content/uploads/2020/02/deus-guzzi-850-t3-4.jpg"],
-    name: 'Braaaaaap',
     year: '2016',
     make: 'Moto Guzzi',
     model: '850 T3',
@@ -33,7 +31,6 @@ motorbikes = [
 
   {
     image_url: ["https://cdnmedia.endeavorsuite.com/images/catalogs/17638/products/detail/524b69f4-3c80-4c80-bdb9-0415f5c00457.jpg", "https://cdnmedia.endeavorsuite.com/images/catalogs/17638/products/detail/31494350-022a-4d30-a0cb-cb851e8cf10e.jpg", "https://i1.wp.com/warungasep.net/wp-content/uploads/2018/10/yzf-r1-2019-rapid-red-460x315.jpg?resize=460%2C315", "https://www.otomaniac.com/wp-content/uploads/2015/09/Yamaha-YZF-R1-Red.jpg"],
-    name: 'Braaaaaap',
     year: '2016',
     make: 'Yamaha',
     model: 'YZF-R1M',
@@ -46,7 +43,6 @@ motorbikes = [
 
   {
     image_url: ["https://imgx.gridoto.com/crop/0x0:0x0/700x465/photo/2019/07/10/3482866892.jpg", "https://cdn-2.returnofthecaferacers.com/wp-content/uploads/2017/10/motobailey-cb550-4-e1528246092792.jpg", "https://kickstart.bikeexif.com/wp-content/uploads/2020/03/1977-honda-cb550-cafe-racer.jpg", "https://www.lazone.id/news/honda-cb550-idaman-builder-retro-160130y.jpg19284"],
-    name: 'Braaaaaap',
     year: '1976',
     make: 'Honda',
     model: 'CB550',
@@ -58,7 +54,6 @@ motorbikes = [
 
   {
     image_url: ["https://www.harapanrakyat.com/wp-content/uploads/2019/09/Honda-Africa-Twin-2020-CRF1100L.jpg", "https://imgx.motorplus-online.com/crop/0x0:0x0/360x240/photo/2019/09/23/1271763764.jpg", "https://imgd.aeplcdn.com/393x221/bw/ec/39257/Honda-Africa-Twin-2019-Side-153732.jpg?wm=0&q=85", "https://ik.imagekit.io/hj8sm3kk7/medium/gallery/exterior/73/1592/honda-crf1000l-africa-twin-engine-view-703363.jpg"],
-    name: 'Braaaaaap',
     year: '2016',
     make: 'Honda',
     model: 'Africa Twin XRV650',
@@ -130,6 +125,19 @@ motorbikes = [
   },
 
   {
+    image_url: ["https://stat.overdrive.in/wp-content/odgallery/2019/06/52784_BMWS1000RR_014_jk.jpg", "https://auto.ndtvimg.com/bike-images/large/bmw/s-1000-rr/bmw-s-1000-rr.webp?v=7"],
+    name: 'Lets get some speeding tickets!',
+    year: '2019',
+    make: 'BMW',
+    model: 'S 1000 RR',
+    category: 'Superbike',
+    description: 'Screamin fast. For those who want to drop a knee...BMW S1000RR is a race oriented sport bike initially made by BMW Motorrad to compete in the 2009 Superbike World Championship, that is now in commercial production. It was introduced in Munich in April 2008, and is powered by a 999 cc four-cylinder engine redlined at 14,200 rpm.',
+    address: 'Brussels, Belgium',
+    price: 250
+  },
+
+
+  {
     image_url: ["https://images.unsplash.com/photo-1558981001-5864b3250a69?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80", "https://images.unsplash.com/photo-1558980394-4c7c9299fe96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80", "https://stat.overdrive.in/wp-content/odgallery/2017/10/39047_harley-davidson_fat_boy_1.jpg"],
     name: 'Murica!!!',
     year: '2020',
@@ -153,18 +161,6 @@ motorbikes = [
     price: 25
   },
 
-  {
-
-    image_url: ["https://cdn.dealerspike.com/imglib/v1/800x600/imglib/Assets/Inventory/32/D9/32D9E6C0-93C4-4E7E-BE7A-D95F8E08C285.jpg" , "https://images.unsplash.com/photo-1572506745854-299ae0b55400?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"],
-    name: 'Another ok piece of British Engineering.',
-    year: '2014',
-    make: 'Triumph',
-    model: 'Street Triple',
-    category: 'Naked',
-    description: 'Triumph makes a point of emphasizing that the Street Triple is the lightest in its class, a claimed 366 dry weight for the 2020 model. I suppose in part that depends on how you define the class, but by any measure the new bike retains the lightweight, compact feel the line has always been known for. The neutral, natural ergonomics make this a motorcycle I could ride all day long, wanting for nothing except some wind protection.The slipper and assist clutch is light, the brakes are as good as Spurgeon said they were and within a few miles I just feel comfortable with the bike. It always takes me a little time reach an understanding with any motorcycle I\'m riding for the first time. With the Street Triple RS, I\'m comfortable almost immediately.',
-    address: 'Utrecht, Netherlands',
-    price: 90
-  },
 
   {
 
@@ -181,6 +177,19 @@ motorbikes = [
   },
 
   {
+
+    image_url: ["https://cdn.dealerspike.com/imglib/v1/800x600/imglib/Assets/Inventory/32/D9/32D9E6C0-93C4-4E7E-BE7A-D95F8E08C285.jpg" , "https://images.unsplash.com/photo-1572506745854-299ae0b55400?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"],
+    name: 'Another ok piece of British Engineering.',
+    year: '2014',
+    make: 'Triumph',
+    model: 'Street Triple',
+    category: 'Naked',
+    description: 'Triumph makes a point of emphasizing that the Street Triple is the lightest in its class, a claimed 366 dry weight for the 2020 model. I suppose in part that depends on how you define the class, but by any measure the new bike retains the lightweight, compact feel the line has always been known for. The neutral, natural ergonomics make this a motorcycle I could ride all day long, wanting for nothing except some wind protection.The slipper and assist clutch is light, the brakes are as good as Spurgeon said they were and within a few miles I just feel comfortable with the bike. It always takes me a little time reach an understanding with any motorcycle I\'m riding for the first time. With the Street Triple RS, I\'m comfortable almost immediately.',
+    address: 'Utrecht, Netherlands',
+    price: 90
+  },
+
+  {
     image_url: ["https://images.pexels.com/photos/2611686/pexels-photo-2611686.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"],
     name: 'A hardtail you want',
     year: '2009',
@@ -192,17 +201,6 @@ motorbikes = [
     price: 190
   },
 
-  {
-    image_url: ["https://stat.overdrive.in/wp-content/odgallery/2019/06/52784_BMWS1000RR_014_jk.jpg", "https://auto.ndtvimg.com/bike-images/large/bmw/s-1000-rr/bmw-s-1000-rr.webp?v=7"],
-    name: 'Lets get some speeding tickets!',
-    year: '2019',
-    make: 'BMW',
-    model: 'S 1000 RR',
-    category: 'Superbike',
-    description: 'Screamin fast. For those who want to drop a knee...BMW S1000RR is a race oriented sport bike initially made by BMW Motorrad to compete in the 2009 Superbike World Championship, that is now in commercial production. It was introduced in Munich in April 2008, and is powered by a 999 cc four-cylinder engine redlined at 14,200 rpm.',
-    address: 'Brussels, Belgium',
-    price: 250
-  },
 
   {
     image_url: ["https://images.pexels.com/photos/2549942/pexels-photo-2549942.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "https://images.pexels.com/photos/3378437/pexels-photo-3378437.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", "https://images.pexels.com/photos/34006/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"],
@@ -242,18 +240,6 @@ motorbikes = [
   },
 
   {
-    image_url: ["https://images.pexels.com/photos/1309668/pexels-photo-1309668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"],
-    name: 'Fun Ducati!',
-    year: '2017',
-    make: 'Ducati',
-    model: 'Streetfighter 1098s',
-    category: 'Naked',
-    description: 'This is a mean and nasty Ducati that delivers a wild ride. It’s not practical in any way, shape or form, but it is bloody good fun to ride thanks to a storming engine and thoroughly sorted chassis. If this sounds like your kind of bike, give the Streetfighter a blast. If not, then avoid it and buy something like a Monster that is still naked, but considerably more refined.',
-    address: 'Amsterdan, Netherlands',
-    price: 17
-  },
-
-  {
     image_url: ["https://images.pexels.com/photos/595807/pexels-photo-595807.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", "https://psmfirestorm.blob.core.windows.net/crs-images/210557/7987/original.jpg"],
     name: 'Nimble and Fast!!!!',
     year: '2018',
@@ -264,6 +250,18 @@ motorbikes = [
     address: 'Delft, Netherlands',
     price: 12
   },
+
+  {
+    image_url: ["https://images.pexels.com/photos/1309668/pexels-photo-1309668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"],
+    name: 'Fun Ducati!',
+    year: '2017',
+    make: 'Ducati',
+    model: 'Streetfighter 1098s',
+    category: 'Naked',
+    description: 'This is a mean and nasty Ducati that delivers a wild ride. It’s not practical in any way, shape or form, but it is bloody good fun to ride thanks to a storming engine and thoroughly sorted chassis. If this sounds like your kind of bike, give the Streetfighter a blast. If not, then avoid it and buy something like a Monster that is still naked, but considerably more refined.',
+    address: 'Amsterdan, Netherlands',
+    price: 17
+  }
 ]
 
 
