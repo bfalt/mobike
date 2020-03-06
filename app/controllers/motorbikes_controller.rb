@@ -7,7 +7,7 @@ class MotorbikesController < ApplicationController
     @motorbikes = policy_scope(Motorbike).geocoded
 
     if params[:query].present?
-        @motorbikes = @motorbikes.search_by_make_and_model_and_address(params[:query])
+        @motorbikes = @motorbikes.search_by_make_and_model_and_address_and_category(params[:query])
     end
 
 
@@ -24,7 +24,6 @@ class MotorbikesController < ApplicationController
   def show
     @booking = Booking.new
     @reviews = @motorbike.reviews
-    # @reviews = Review.all
     authorize @motorbike
     @markers =
       [{
@@ -76,6 +75,6 @@ class MotorbikesController < ApplicationController
   end
 
   def motorbike_params
-    params.require(:motorbike).permit(:name, :make, :model, :year, :description, :address, photos: [])
+    params.require(:motorbike).permit(:make, :model, :year, :description, :price, :address, :category, photos: [])
   end
 end

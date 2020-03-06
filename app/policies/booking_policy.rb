@@ -12,4 +12,12 @@ class BookingPolicy < ApplicationPolicy
   def create?
     true
   end
+
+   def accept?
+    record.motorbike.user == user
+  end
+
+   def reject?
+    record.motorbike.user == user
+  end
 end

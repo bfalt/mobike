@@ -8,20 +8,12 @@
     <div class="Card__body">
       <h3 class="Card__name"><%= motorbike.make %> , <%= motorbike.model %></h3>
       <div class="Card__price">$ <%= "#{motorbike.price}0" %> / day</div>
-           <div class="d-flex">
-              <% (1..5).to_a.each do |el| %>
-                <% if  !motorbike.reviews.empty? %>
-                <%#= motorbike.reviews.last.rating %>
-                    <% if el <= motorbike.reviews.last.rating %>
-                      <i class="fas fa-star" style="color: #ffb400;"></i>
-                  <% else %>
-                    <i class="fas fa-star" style="color: #ccc"></i>
-                  <% end %>
 
-                <% end %>
-              <% end %>
-            </div>
-          </span>
+      <div class="Card__meta">
+        <div class="Card__rating">
+          <% motorbike.average_rating.times do %>
+            <i class="fas fa-star" style="color: #ffb400;"></i>
+          <% end %>
           <i class="fas fa-heart color-grey-text"></i>
     </div>
   </div>

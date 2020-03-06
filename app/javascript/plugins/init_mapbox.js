@@ -45,7 +45,7 @@ const initMapbox = () => {
     //Initializing a new map
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v10'
+      style: 'mapbox://styles/rachael-n/ck7fleq3v07181ijtkw7lyyts'
     });
   //add markers
   // parsing the markers from the HTML FILE

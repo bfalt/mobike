@@ -64,7 +64,7 @@ motorbikes = [
     year: '2020',
     make: 'Harley Davidson',
     model: 'Fat Boy',
-    description: 'Act like a tough guy, ride this bike.',
+    description: 'Designed by Willie G. Davidson and Louie Netz, Harley-Davidson built a prototype Fat Boy in Milwaukee for the Daytona Bike Week rally at Daytona Beach in 1988 and 1989',
     address: 'Berlin, Germany',
     price: 21
   },
@@ -87,7 +87,7 @@ motorbikes = [
     year: '2014',
     make: 'Triumph',
     model: 'Street Triple',
-    description: 'Comfortable, fun. Good for old and young alike.',
+    description: 'Triumph makes a point of emphasizing that the Street Triple is the lightest in its class, a claimed 366 dry weight for the 2020 model. I suppose in part that depends on how you define the class, but by any measure the new bike retains the lightweight, compact feel the line has always been known for. The neutral, natural ergonomics make this a motorcycle I could ride all day long, wanting for nothing except some wind protection.The slipper and assist clutch is light, the brakes are as good as Spurgeon said they were and within a few miles I just feel comfortable with the bike. It always takes me a little time reach an understanding with any motorcycle I\'m riding for the first time. With the Street Triple RS, I\'m comfortable almost immediately.',
     address: 'Utrecht, Netherlands',
     price: 90
   },
