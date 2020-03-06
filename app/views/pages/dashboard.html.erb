@@ -8,17 +8,18 @@
       </h3>
     </div>
   </div>
+  <div class="container-fluid">
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-3">
       <ul class="list-group">
+          <li class="list-group-item">
+            <%= link_to 'All Bikes', motorbikes_path %>
+          </li>
           <li class="list-group-item">
             <%= link_to 'Edit Profile', edit_user_registration_path %>
           </li>
           <li class="list-group-item">
-            <%= link_to 'Photos', pages_dashboard_path %>
-          </li>
-          <li class="list-group-item">
-            <%= link_to 'Reviews', pages_dashboard_path  %>
+            <%= link_to 'Terms', pages_terms_path  %>
           </li>
           <li class="list-group-item">
             <%= link_to destroy_user_session_path, method: :delete do %>
@@ -27,7 +28,7 @@
           </li>
         </ul>
     </div>
-    <div class="col-md-6">
+    <div class="col-6">
         <div class="bookingcards">
           <div>
             <% @bookings.each do |booking| %>
@@ -45,13 +46,13 @@
             </div>
             <% end %>
           </div>
-     </div>
     </div>
-    <div class="col-md-3">
-      <% @motorbikes.each do |motorbike| %>
-        <%= render 'motorbike_card', motorbike: motorbike %>
-      <% end %>
+
+    <div class="col-3">
+
     </div>
+    </div>
+  </div>
   </div>
 </div>
 </section>
