@@ -50,13 +50,15 @@
             </div>
             <% end %>
           </div>
-    </div>
+        </div>
 
-    <div class="col-3">
-
+        <div class="col-3">
+          <% @motorbikes.each do |motorbike| %>
+            <%= render "motorbike_card", motorbike: motorbike %>
+          <% end %>
+        </div>
+      </div>
     </div>
-    </div>
-  </div>
   </div>
 </div>
 </section>
