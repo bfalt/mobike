@@ -1,5 +1,5 @@
 class Motorbike < ApplicationRecord
-  CATEGORIES = ['Moped', 'Naked Bike', 'Superbike', 'Cafe Racer', 'Enduro', 'Hard Tail', 'Cruiser', 'Custom', 'Soprtbike']
+  CATEGORIES = ['Moped', 'Naked Bike', 'Superbike', 'Cafe Racer', 'Enduro', 'Hard Tail', 'Cruiser', 'Sportbike', 'Custom']
   has_many :bookings, dependent: :destroy
   has_many :reviews, through: :bookings
   belongs_to :user
