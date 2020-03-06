@@ -3,8 +3,6 @@
 @import "motorbike_show";
 
 
-
-
 .motorbikes {
 justify-content: start;
 }
@@ -49,10 +47,6 @@ justify-content: start;
   object-fit: cover;
 }
 
-
-
-
-
 @media(max-width: 992px) {
   .cards {
     grid-template-columns: 1fr 1fr;
@@ -63,4 +57,3 @@ justify-content: start;
     grid-template-columns: 1fr;
   }
 }
-
