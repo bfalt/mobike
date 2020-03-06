@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :bookings, only: [:create]
   end
   resources :bookings, only: [:show] do
+    patch '/accept', to: "bookings#accept"
+    patch '/reject', to: "bookings#reject"
     resources :reviews, only: [:new, :create]
   end
   devise_for :users
