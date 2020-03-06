@@ -26,6 +26,7 @@ justify-content: start;
 }
 
 
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -46,6 +47,7 @@ justify-content: start;
   width: 120px;
   object-fit: cover;
 }
+
 
 @media(max-width: 992px) {
   .cards {
