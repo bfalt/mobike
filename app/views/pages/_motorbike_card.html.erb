@@ -1,0 +1,6 @@
+<% motorbike.bookings.each do |booking| %>
+  <% unless ['accepted', 'rejected'].include? booking.status %>
+    <%= link_to "Accept", booking_accept_path(booking), method: :patch %>
+    <%= link_to "Reject", booking_reject_path(booking), method: :patch %>
+  <% end %>
+<% end %>
