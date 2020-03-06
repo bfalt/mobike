@@ -44,43 +44,13 @@
     }
   }
 
-  &__body {
-    padding: 24px 16px;
-    background-color: $white;
-    height: 130px;
-  }
-
   &__name {
     margin: 0;
     font-size: 21px;
     line-height: 1.5;
     font-weight: bold;
   }
-
-  &__price {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #496357;
-    font-weight: bold;
-  }
-
-  &__rating-text {
-    margin-left: 8px;
-    font-size: 12px;
-    color: gray;
-  }
-
-  &__meta {
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
 }
 
-.mc-class {
-  width: 50px;
-  height: 50px;
-}
 
 
