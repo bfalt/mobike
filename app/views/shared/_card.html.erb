@@ -1,5 +1,5 @@
 <%= link_to motorbike_path(motorbike), class: "Card" do %>
-  <div class="Card__inner">
+  <div class="Card__inner ">
     <figure class="Card__img">
       <% if motorbike.photos[0] %>
           <%= cl_image_tag motorbike.photos[0].key, width: 300, height:300, fill: :crop, class: 'lazyload' %>
