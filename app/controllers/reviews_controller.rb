@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
     @review.booking = Booking.find(params[:booking_id])
     authorize @review
     @review.save
-    redirect_to booking_path(@booking)
+    redirect_to motorbikes_url
   end
 
   private

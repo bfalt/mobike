@@ -48,7 +48,12 @@
     <div  id="map" style="width: 85%; height: 80vh; margin-top: 20px; display: inline-block;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   </div>
 </div>
-
+<div>
+  <% @motorbike.reviews.each do |review| %>
+  <h4><%= review.description %></h4>
+  <p><%= review.rating %> <i class="fas fa-star"></i></p>
+  <% end %>
+</div>
 
 <%= link_to "View all bikes", motorbikes_path, id: "show-page-button", class: "btn btn-outline-info ml-2"%>
 
@@ -60,5 +65,3 @@
 <% if policy(@motorbike).destroy? %>
     <%= link_to "Delete", motorbike_path(@motorbike), id: "show-page-button", class: "btn btn-outline-info ml-2", method: :delete, data: { confirm: "Are you sure?" }%>
 <% end %>
-
-

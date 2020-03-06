@@ -7,7 +7,6 @@ class Motorbike < ApplicationRecord
   geocoded_by :address, if: :will_save_change_to_address?
   after_validation :geocode
 
-  validates :name, presence: true
   validates :make, presence: true
   validates :model, presence: true
   validates :year, presence: true
@@ -18,7 +17,7 @@ class Motorbike < ApplicationRecord
   pg_search_scope :search_by_make_and_model_and_address,
     against: [ :make, :model, :address ],
     using: {
-      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+      tsearch: { prefix: true }
   }
 
   include AlgoliaSearch
