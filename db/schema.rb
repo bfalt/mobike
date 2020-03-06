@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2020_03_06_061033) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "total_price"
     t.index ["motorbike_id"], name: "index_bookings_on_motorbike_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
