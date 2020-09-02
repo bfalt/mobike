@@ -1,22 +1,42 @@
-<%= link_to motorbike_path(motorbike), class: "Card" do %>
+<%= link_to motorbike_path(motorbike), style: "text-decoration: none;" do %>
+  <div class="p-2">
+    <div class="mobike-card">
+        <% if motorbike.photos[0] %>
+          <%= cl_image_tag motorbike.photos[0].key, width: 300, height:300, fill: :crop, class: 'lazyload' %>
+        <% end %>
+      <div class="mobike-card-infos">
+        <div class="text-left">
+          <h2><%= motorbike.make %> , <%= motorbike.model %></h2>
+          <p>Short description here!</p>
+        </div>
+        <h2 class="mobike-card-pricing" style="color: black;">$ <%= "#{motorbike.price}" %> / day</h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="mobike-card-user avatar-bordered" />
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<!-- Old code
+
+<#%= link_to motorbike_path(motorbike), class: "Card" do %>
   <div class="Card__inner ">
     <figure class="Card__img">
-      <% if motorbike.photos[0] %>
-          <%= cl_image_tag motorbike.photos[0].key, width: 300, height:300, fill: :crop, class: 'lazyload' %>
-      <% end %>
+      <#% if motorbike.photos[0] %>
+          <#%= cl_image_tag motorbike.photos[0].key, width: 300, height:300, fill: :crop, class: 'lazyload' %>
+      <#% end %>
     </figure>
     <div class="Card__body">
-      <h3 class="Card__name"><%= motorbike.make %> , <%= motorbike.model %></h3>
-      <div class="Card__price">$ <%= "#{motorbike.price}" %> / day</div>
+      <h3 class="Card__name"><#%= motorbike.make %> , <%= motorbike.model %></h3>
+      <div class="Card__price">$ <#%= "#{motorbike.price}" %> / day</div>
 
       <div class="Card__meta">
         <div class="Card__rating">
-          <% motorbike.average_rating.times do %>
+          <#% motorbike.average_rating.times do %>
             <i class="fas fa-star" style="color: #ffb400;"></i>
-          <% end %>
-        <!-- <i class="fas fa-heart color-grey-text"></i> -->
+          <#% end %>
+        this line was commented out <i class="fas fa-heart color-grey-text"></i>
         </div>
       </div>
     </div>
-  <% end %>
-</div>
+  <#% end %>
+</div> -->

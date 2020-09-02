@@ -8,16 +8,66 @@
 }
 
 .bookingcards {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
   grid-gap: 8px;
   height: 120px;
-
+  height: 200px;
 }
 
 .bookingcard img {
-
-  height: 100%;
-  width: 120px;
+  width: 100%;
   object-fit: cover;
+}
+
+.mobike-card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  color: black;
+}
+
+.mobike-card > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.mobike-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.mobike-card p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.mobike-card .mobike-card-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.mobike-card-infos .mobike-card-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+@media screen and (max-width: 1276px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
