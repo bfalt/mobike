@@ -24,6 +24,13 @@
   transition: background 0.1s ease;
 }
 
+.btn-outline-white:hover {
+  background: #717776;
+  color: white;
+  border: 2px #717776;
+  transition: background 0.1s ease;
+}
+
 .btn-outline {
   padding: 10px 24px;
   background: transparent;
